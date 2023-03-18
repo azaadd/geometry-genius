@@ -1,10 +1,10 @@
-document.getElementById('btn-triangle-calculate').addEventListener('click', function(){
+document.getElementById('btn-parallelogram-calculate').addEventListener('click', function(){
 
-    const firstNumberField = document.getElementById('triangle-b');
+    const firstNumberField = document.getElementById('parallelogram-b');
     const inputFirstNumberFieldString = firstNumberField.value;
     const inputFirstNumberField = parseFloat(inputFirstNumberFieldString);
     
-    const secondNumberField = document.getElementById('triangle-h');
+    const secondNumberField = document.getElementById('parallelogram-h');
     const inputSecondNumberFieldString = secondNumberField.value;
     const inputSecondNumberField = parseFloat(inputSecondNumberFieldString);
 
@@ -18,13 +18,13 @@ document.getElementById('btn-triangle-calculate').addEventListener('click', func
     }
 
     else if(inputFirstNumberField == 0){
-        alert('Triangle value cannot be zero');
+        alert('Parallelogram value cannot be zero');
         return;
     }
 
     
     else if(inputSecondNumberField == 0){
-        alert('Triangle value cannot be zero');
+        alert('Parallelogram value cannot be zero');
         return;
     }
 
@@ -40,7 +40,7 @@ document.getElementById('btn-triangle-calculate').addEventListener('click', func
 
 
     
-    const numberCalculation = 0.5 *inputFirstNumberField * inputSecondNumberField;
+    const numberCalculation = inputFirstNumberField * inputSecondNumberField;
     
     firstNumberField.value = '';
     secondNumberField.value = '';
