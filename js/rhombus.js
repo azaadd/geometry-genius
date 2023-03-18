@@ -1,5 +1,7 @@
 document.getElementById('btn-rhombus-calculate').addEventListener('click', function(){
 
+    const name = document.getElementById('rhombus-name').innerText;
+
     const firstNumberField = document.getElementById('rhombus-d1');
     const inputFirstNumberFieldString = firstNumberField.value;
     const inputFirstNumberField = parseFloat(inputFirstNumberFieldString);
@@ -36,14 +38,15 @@ document.getElementById('btn-rhombus-calculate').addEventListener('click', funct
         alert('Please enter a positive number');
         return;
     }
+    else{
+        serial += 1;
+        const numberCalculation = (0.5 *inputFirstNumberField * inputSecondNumberField).toFixed(2);
+        
+        displayData(name, numberCalculation);
 
-
-
-    
-    const numberCalculation = 0.5 *inputFirstNumberField * inputSecondNumberField;
+    }
     
     firstNumberField.value = '';
     secondNumberField.value = '';
-    console.log(numberCalculation);
     
 });

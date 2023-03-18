@@ -1,5 +1,7 @@
 document.getElementById('btn-parallelogram-calculate').addEventListener('click', function(){
 
+    const name = document.getElementById('parallelogram-name').innerText;
+
     const firstNumberField = document.getElementById('parallelogram-b');
     const inputFirstNumberFieldString = firstNumberField.value;
     const inputFirstNumberField = parseFloat(inputFirstNumberFieldString);
@@ -36,11 +38,13 @@ document.getElementById('btn-parallelogram-calculate').addEventListener('click',
         alert('Please enter a positive number');
         return;
     }
+    else{
+        serial += 1;
+        const numberCalculation = (inputFirstNumberField * inputSecondNumberField).toFixed(2);
+        
+        displayData(name, numberCalculation);
 
-
-
-    
-    const numberCalculation = inputFirstNumberField * inputSecondNumberField;
+    }
     
     firstNumberField.value = '';
     secondNumberField.value = '';

@@ -1,4 +1,7 @@
+
 document.getElementById('btn-ellipse-calculate').addEventListener('click', function(){
+
+    const name = document.getElementById('ellipse-name').innerText;
 
     const firstNumberField = document.getElementById('ellipse-a');
     const inputFirstNumberFieldString = firstNumberField.value;
@@ -36,14 +39,16 @@ document.getElementById('btn-ellipse-calculate').addEventListener('click', funct
         alert('Please enter a positive number');
         return;
     }
+    else{
+        serial += 1;
+        const numberCalculation = (3.14 *inputFirstNumberField * inputSecondNumberField).toFixed(2);
+        
+        displayData(name, numberCalculation);
 
-
-
-    
-    const numberCalculation = 3.14 *inputFirstNumberField * inputSecondNumberField;
+    }
     
     firstNumberField.value = '';
     secondNumberField.value = '';
-    console.log(numberCalculation);
+    
     
 });

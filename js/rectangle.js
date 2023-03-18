@@ -1,4 +1,7 @@
+
 document.getElementById('btn-rectangle-calculate').addEventListener('click', function(){
+
+    const name = document.getElementById('rectangle-name').innerText;
 
     const firstNumberField = document.getElementById('rectangle-w');
     const inputFirstNumberFieldString = firstNumberField.value;
@@ -37,13 +40,15 @@ document.getElementById('btn-rectangle-calculate').addEventListener('click', fun
         return;
     }
 
+    else{
+        serial += 1;
+        const numberCalculation = (inputFirstNumberField * inputSecondNumberField).toFixed(2);
+        
+        displayData(name, numberCalculation);
 
-
-    
-    const numberCalculation = inputFirstNumberField * inputSecondNumberField;
+    }
     
     firstNumberField.value = '';
     secondNumberField.value = '';
-    console.log(numberCalculation);
     
 });

@@ -1,4 +1,8 @@
+let serial = 0;
+
 document.getElementById('btn-triangle-calculate').addEventListener('click', function(){
+
+    const name = document.getElementById('triangle-name').innerText;
 
     const firstNumberField = document.getElementById('triangle-b');
     const inputFirstNumberFieldString = firstNumberField.value;
@@ -8,6 +12,7 @@ document.getElementById('btn-triangle-calculate').addEventListener('click', func
     const inputSecondNumberFieldString = secondNumberField.value;
     const inputSecondNumberField = parseFloat(inputSecondNumberFieldString);
 
+    
     if(!inputFirstNumberField && inputFirstNumberField != 0){
         alert('Input field cannot be left blank');
         return;
@@ -21,13 +26,12 @@ document.getElementById('btn-triangle-calculate').addEventListener('click', func
         alert('Triangle value cannot be zero');
         return;
     }
-
-    
     else if(inputSecondNumberField == 0){
         alert('Triangle value cannot be zero');
         return;
     }
 
+    
     else if(inputFirstNumberField < 0){
         alert('Please enter a positive number');
         return;
@@ -37,13 +41,15 @@ document.getElementById('btn-triangle-calculate').addEventListener('click', func
         return;
     }
 
+    else{
+        serial += 1;
+        const numberCalculation = (0.5 *inputFirstNumberField * inputSecondNumberField).toFixed(2);
+        
+        displayData(name, numberCalculation);
 
-
-    
-    const numberCalculation = 0.5 *inputFirstNumberField * inputSecondNumberField;
+    }
     
     firstNumberField.value = '';
-    secondNumberField.value = '';
-    console.log(numberCalculation);
+    secondNumberField.value = '';   
     
 });

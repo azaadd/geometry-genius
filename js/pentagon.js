@@ -1,4 +1,8 @@
+
+
 document.getElementById('btn-pentagon-calculate').addEventListener('click', function(){
+
+    const name = document.getElementById('pentagon-name').innerText;
 
     const firstNumberField = document.getElementById('pentagon-s');
     const inputFirstNumberFieldString = firstNumberField.value;
@@ -36,14 +40,15 @@ document.getElementById('btn-pentagon-calculate').addEventListener('click', func
         alert('Please enter a positive number');
         return;
     }
+    else{
+        serial += 1;
+        const numberCalculation = (5/2 *inputFirstNumberField * inputSecondNumberField).toFixed(2);
+        
+        displayData(name, numberCalculation);
 
-
-
-    
-    const numberCalculation = 5/2 *inputFirstNumberField * inputSecondNumberField;
-    
+    }    
     firstNumberField.value = '';
     secondNumberField.value = '';
-    console.log(numberCalculation);
+    
     
 });
