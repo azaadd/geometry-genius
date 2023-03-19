@@ -1,3 +1,6 @@
+
+
+
 function displayData(tName, area) {
     const container = document.getElementById('table-container');
     const tr = document.createElement('tr');
