@@ -41,7 +41,7 @@ document.getElementById('btn-parallelogram-calculate').addEventListener('click',
     else{
         serial += 1;
         const numberCalculation = (inputFirstNumberField * inputSecondNumberField).toFixed(2);
-        
+        //  displayData function call
         displayData(name, numberCalculation);
 
     }
@@ -51,3 +51,5 @@ document.getElementById('btn-parallelogram-calculate').addEventListener('click',
     console.log(numberCalculation);
     
 });
+//  multiBackgroundColor function call
+multiBackgroundColor('color-3');

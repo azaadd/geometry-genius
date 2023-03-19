@@ -42,13 +42,13 @@ document.getElementById('btn-ellipse-calculate').addEventListener('click', funct
     else{
         serial += 1;
         const numberCalculation = (3.14 *inputFirstNumberField * inputSecondNumberField).toFixed(2);
-        
+        //  displayData function call
         displayData(name, numberCalculation);
 
     }
     
     firstNumberField.value = '';
     secondNumberField.value = '';
-    
-    
 });
+//  multiBackgroundColor function call
+multiBackgroundColor('color-6');
