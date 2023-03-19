@@ -22,13 +22,13 @@ function displayData(tName, area) {
     return "rgb(" + color.join(", ") + ")";
   }
   
-  function multiBackgroundColor(id) {
-    document.getElementById(id).addEventListener("mouseover", function () {
-      const backGround = document.getElementById(id);
+  function multiBackgroundColor(cardId) {
+    document.getElementById(cardId).addEventListener("mouseover", function () {
+      const backGround = document.getElementById(cardId);
       backGround.style.backgroundColor = multiColor();
     });
-    document.getElementById(id).addEventListener("mouseout", function () {
-      const backGround = document.getElementById(id);
+    document.getElementById(cardId).addEventListener("mouseout", function () {
+      const backGround = document.getElementById(cardId);
       backGround.style.backgroundColor = "#ffffff";
     });
   }
